@@ -113,6 +113,11 @@ const HomeScreen = () => {
             showsHorizontalScrollIndicator={false}
           />
         </View>
+
+        <View style={{ marginTop: 24 }}>
+          <Text style={styles.footer}>{translate?.t("developed")}</Text>
+          <Text style={styles.rights}>{translate?.t("allRights")}</Text>
+        </View>
       </ScrollView>
     </>
   );

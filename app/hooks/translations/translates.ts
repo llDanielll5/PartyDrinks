@@ -27,9 +27,11 @@ export const translates = {
     alcoholics: {
       alcohol: "Alcoólico",
       nonAlcohol: "Não Alcoólico",
-      optional: "Álcool Opcional",
+      optional: "Opcional",
     },
     seeAll: "Ver Todos",
+    developed: "App criado por Daniel Mota",
+    allRights: "DGS Softwares 2022 - Todos direitos reservados",
   },
   es: {},
 };

@@ -51,6 +51,16 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: COLORS.pink,
   },
+  footer: {
+    textAlign: "center",
+    fontFamily: "RalewaySemibold",
+    fontSize: 16,
+  },
+  rights: {
+    textAlign: "center",
+    fontFamily: "Raleway",
+    fontSize: 14,
+  },
 });
 
 export default styles;

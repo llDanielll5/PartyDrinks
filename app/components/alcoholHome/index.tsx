@@ -33,7 +33,7 @@ const AlcoholHome: React.FC<ItemProps> = (props) => {
         };
       case 2:
         return {
-          uri: "https://cdn.pixabay.com/photo/2014/06/26/16/33/cocktail-377960_960_720.png",
+          uri: "https://cdn.pixabay.com/photo/2012/04/15/20/36/juice-35236_960_720.png",
         };
     }
   };
