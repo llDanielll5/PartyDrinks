@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { COLORS } from "../../globals/constants/colors";
 
 const styles = StyleSheet.create({
   container: {
@@ -23,6 +24,32 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 8,
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
+  },
+  drinkImg: {
+    width: 400,
+    height: 600,
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: 0,
+  },
+  optionsMenu: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginVertical: 12,
+    width: "100%",
+  },
+  seeAllContainer: {
+    borderWidth: 1,
+    borderColor: COLORS.pink,
+    borderRadius: 8,
+    padding: 6,
+  },
+  seeAll: {
+    fontFamily: "RalewaySemibold",
+    fontSize: 12,
+    color: COLORS.pink,
   },
 });
 
