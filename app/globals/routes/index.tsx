@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import HomeScreen from "../../screens/home";
 import Onboarding from "../../screens/onboarding";
 import { getFirstAccess } from "../../services/firstAccess";
+import DrinkDetails from "../../screens/drinkDetail";
+import CategoriesFiltered from "../../screens/categories";
+import CategoriesAlcoholFiltered from "../../screens/categoriesAlcohol";
 
 const Routes = () => {
   const [isOnboarding, setIsOnboarding] = useState<boolean | null>(null);
@@ -35,6 +38,21 @@ const Routes = () => {
         <Stack.Screen
           name="HomeScreen"
           component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="DrinkDetails"
+          component={DrinkDetails}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CategoryFilter"
+          component={CategoriesFiltered}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="CategoryAlcoholFilter"
+          component={CategoriesAlcoholFiltered}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

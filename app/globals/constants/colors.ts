@@ -4,4 +4,7 @@ export const COLORS = {
   orange: "#F1A411",
   black: "#1E2742",
   pink: "#FB7D8A",
+  primary: "#ff0073",
+  secondary: "#ffe500",
+  tertiary: "#f0fafc",
 };

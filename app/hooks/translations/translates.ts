@@ -2,8 +2,8 @@ export const translates = {
   en: { welcome: "Hello", wantLearn: "I want to learn..." },
   "pt-BR": {
     wantLearn: "Eu quero aprender...",
-    appName: "Drink Festa",
-    welcome: "Bem vindo ao Party Drinks",
+    appName: "Drink King",
+    welcome: "Bem vindo ao Drink King",
     welcomeSubtitle:
       "O Party Drinks foi criado para te trazer todas receitas de coquetéis existentes!",
     welcome2: "Drinks na palma de sua mão",
@@ -11,6 +11,9 @@ export const translates = {
     search: "Buscar",
     categorie: "Categoria",
     alcohol: "Álcool",
+    alcoholic: "Teor Alcoólico",
+    glassUsed: "Copo Utilizado",
+    suggestionDrink: "Sugestão de Drinque",
     categories: {
       ordinaryDrink: "Drinque Comum",
       cocktail: "Coquetel",
@@ -29,9 +32,10 @@ export const translates = {
       nonAlcohol: "Não Alcoólico",
       optional: "Opcional",
     },
+    ingredients: "Ingredientes",
     seeAll: "Ver Todos",
-    developed: "App criado por Daniel Mota",
-    allRights: "DGS Softwares 2022 - Todos direitos reservados",
+    developed: "App criado por SOFX - Soluções Digitais",
+    allRights: "Todos direitos reservados",
   },
   es: {},
 };
