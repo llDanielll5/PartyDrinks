@@ -15,7 +15,7 @@ export const PagesOnboarding = [
         }}
       />
     ),
-    title: "Bem vindo ao Party Drinks",
+    title: "Bem vindo ao Drink King",
     subtitle:
       "O Party Drinks foi criado para te trazer todas receitas de coquetéis existentes!",
   },

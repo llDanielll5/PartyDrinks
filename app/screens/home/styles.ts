@@ -61,6 +61,16 @@ const styles = StyleSheet.create({
     fontFamily: "Raleway",
     fontSize: 14,
   },
+  h2: {
+    fontFamily: "RalewaySemibold",
+    fontSize: 18,
+    marginVertical: 12,
+  },
+  suggestion: {
+    fontFamily: "RalewaySemibold",
+    fontSize: 18,
+    marginVertical: 12,
+  },
 });
 
 export default styles;

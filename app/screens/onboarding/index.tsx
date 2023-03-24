@@ -38,7 +38,7 @@ const Onboarding = () => {
     <View style={{ flex: 1, backgroundColor: "white" }}>
       <Image source={require("../../images/herb.png")} style={styles.herbImg} />
       <Image
-        source={require("../../images/drink.png")}
+        source={require("../../../assets/drinkkingText.png")}
         style={styles.drinkImg}
       />
 
