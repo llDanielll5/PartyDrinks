@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import { COLORS } from "../../globals/constants/colors";
@@ -11,6 +12,7 @@ interface CategoriesHomeProps {
 const CategoriesHome: React.FC<CategoriesHomeProps> = (props) => {
   const { item, index } = props;
   const translate = useTranslations();
+  const { navigate } = useNavigation();
 
   const switchImagesByIndex = (index: number) => {
     switch (index) {
@@ -83,27 +85,42 @@ const CategoriesHome: React.FC<CategoriesHomeProps> = (props) => {
     }
   };
   return (
-    <TouchableOpacity activeOpacity={0.5} style={styles.cardContainer}>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      style={styles.cardContainer}
+      onPress={() =>
+        navigate("CategoryFilter", {
+          categoryName: item?.strCategory,
+          namePT: switchCategoriesTranslate(index),
+        })
+      }
+    >
       <Image
         source={switchImagesByIndex(index)}
         style={styles.img}
         resizeMode={"contain"}
       />
       <Text style={styles.categorie}>{switchCategoriesTranslate(index)}</Text>
-      {/* <Text>tantos mix</Text> */}
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   cardContainer: {
+    marginLeft: 12,
     width: 86,
     height: 112,
     backgroundColor: COLORS.background,
-    marginRight: 12,
+    marginRight: 4,
     borderRadius: 12,
     alignItems: "center",
     marginTop: 8,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+    marginVertical: 8,
   },
   categorie: {
     fontFamily: "RalewaySemibold",

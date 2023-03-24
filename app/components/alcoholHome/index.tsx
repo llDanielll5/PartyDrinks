@@ -1,7 +1,8 @@
 import React from "react";
-import { Image, Text, TouchableOpacity, View } from "react-native";
-import { COLORS } from "../../globals/constants/colors";
+import styles from "./styles";
+import { Image, Text, TouchableOpacity } from "react-native";
 import { useTranslations } from "../../hooks/translations";
+import { useNavigation } from "@react-navigation/native";
 
 export interface ItemProps {
   item: any;
@@ -10,6 +11,7 @@ export interface ItemProps {
 
 const AlcoholHome: React.FC<ItemProps> = (props) => {
   const { item, index } = props;
+  const { navigate } = useNavigation();
   const translate = useTranslations();
   const parseText = (index: number) => {
     switch (index) {
@@ -18,7 +20,7 @@ const AlcoholHome: React.FC<ItemProps> = (props) => {
       case 1:
         return translate?.t("alcoholics.nonAlcohol");
       case 2:
-        return translate?.t("alcoholics.optional");
+        return;
     }
   };
   const parseImg = (index: number) => {
@@ -32,42 +34,27 @@ const AlcoholHome: React.FC<ItemProps> = (props) => {
           uri: "https://cdn.pixabay.com/photo/2014/12/21/23/56/juice-576401_960_720.png",
         };
       case 2:
-        return {
-          uri: "https://cdn.pixabay.com/photo/2012/04/15/20/36/juice-35236_960_720.png",
-        };
+        return;
     }
   };
+
+  const handlePressAlcohol = () => {
+    navigate("CategoryAlcoholFilter", {
+      alcoholName: index === 1 ? "Alcoholic" : "Non_Alcoholic",
+      namePT: parseText(index),
+    });
+  };
+
   return (
     <TouchableOpacity
       activeOpacity={0.5}
-      style={{
-        height: 240,
-        width: 180,
-        borderRadius: 16,
-        backgroundColor: COLORS.pink,
-        marginRight: 16,
-      }}
+      style={styles.touch}
+      onPress={handlePressAlcohol}
     >
-      <Text
-        style={{
-          textAlign: "center",
-          fontFamily: "RalewaySemibold",
-          color: "white",
-          fontSize: 24,
-          marginTop: 8,
-        }}
-      >
-        {parseText(index)}
-      </Text>
+      <Text style={styles.text}>{parseText(index)}</Text>
       <Image
         source={parseImg(index)}
-        style={{
-          width: 150,
-          height: 180,
-          borderRadius: 12,
-          marginTop: 8,
-          alignSelf: "center",
-        }}
+        style={styles.img}
         resizeMode={"stretch"}
       />
     </TouchableOpacity>

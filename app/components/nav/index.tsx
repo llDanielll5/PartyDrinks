@@ -4,9 +4,9 @@ import { IconButton } from "react-native-paper";
 import { COLORS } from "../../globals/constants/colors";
 
 interface NavProps {
-  leftContent: LeftProps;
-  middleContent: MiddleProps;
-  rightContent: RightProps;
+  leftContent?: LeftProps;
+  middleContent?: MiddleProps;
+  rightContent?: RightProps;
   backgroundColor?: string;
 }
 
@@ -16,7 +16,7 @@ interface LeftProps {
 }
 interface MiddleProps {
   logo?: any;
-  title: string;
+  title?: string;
 }
 interface RightProps {
   userImage?: string;
@@ -40,16 +40,13 @@ const Nav: React.FC<NavProps> = (props) => {
         rippleColor={COLORS.background}
       />
       {middleContent?.logo ? (
-        <Text>Logo</Text>
+        <Image
+          source={middleContent?.logo}
+          style={{ width: "50%", height: 55 }}
+          resizeMode={"center"}
+        />
       ) : (
-        <Text
-          style={{
-            fontFamily: "RalewaySemibold",
-            fontSize: 26,
-          }}
-        >
-          {middleContent?.title}
-        </Text>
+        <Text style={styles.middleText}>{middleContent?.title}</Text>
       )}
       {rightContent?.userImage ? (
         <TouchableOpacity activeOpacity={0.5} onPress={rightContent?.onPress}>
@@ -76,6 +73,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 16,
     paddingTop: 16,
+  },
+  middleText: {
+    fontFamily: "RalewaySemibold",
+    fontSize: 26,
+    width: "70%",
+    textAlign: "center",
   },
 });
 
