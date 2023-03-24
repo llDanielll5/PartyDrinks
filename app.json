@@ -8,7 +8,7 @@
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./app/images/splashDrink.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#FEF9E4"
     },
     "updates": {

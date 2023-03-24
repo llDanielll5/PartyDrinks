@@ -1,6 +1,8 @@
 node_modules/
+google/
 .expo/
 dist/
+app/firebase/
 npm-debug.*
 *.jks
 *.p8
@@ -12,3 +14,4 @@ web-build/
 
 # macOS
 .DS_Store
+.env
