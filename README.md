@@ -1,4 +1,4 @@
-# PartyDrinks
+# Drink King Mobile Application
 
 A Full-Stack Mobile Application to get cocktails and show how to make it!
 
